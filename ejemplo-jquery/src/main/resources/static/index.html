@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+
+	<h2>Ejemplo con un usuario:</h2>
+	<button id="btn-single">Click para conocer al usuario</button>
+	<pre>La petición se hará a http://localhost:8080/usuario/</pre>
+	<p id="elusuario">El usuario es:</p>
+	<p id="elusuarioDocument">El documento es:</p>
+
+	<h2>Ejemplo con un listado de usuarios</h2>
+	<pre>La petición se realizará a http://localhost:8080/usuarios</pre>
+	<button id="btn-list">Click para conocer al usuario</button>
+
+	<table id="tbl-usuarios">
+		<tr>
+			<th>ID</th>
+			<th>Nombre</th>
+			<th>Edad</th>
+		</tr>
+	</table>
+
+	<h2>Insertar por post un nuevo usuario</h2>
+	<form id="my-form" >
+		<input type="text" name="nombre" placeholder="Nombre"> 
+		<input type="number" name="edad" placeholder="Edad"> 
+			<input type="submit">
+	</form>
+	<span id="mensaje"></span>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/usuariosCtrl.js"></script>
+
+</body>
+</html>
