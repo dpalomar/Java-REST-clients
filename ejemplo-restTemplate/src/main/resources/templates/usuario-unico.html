@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Recuperación de un usuario</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<h2>Usuario creado con los datos...</h2>
+<p>
+	<ul>
+		<li th:utext="${usuario.id}">Id: </li>
+		<li th:utext="${usuario.nombre}">Nombre: </li>
+		<li th:utext="${usuario.edad}">Edad: </li>
+
+	</ul>
+</p>
+<a href="javascript:history.go(-1)">Volver</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Recuperación de un usuario</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h2>Listado de usuarios de la BBDD</h2>
+	<p>
+
+		<table>
+			<tr>
+				<th>ID</th>
+				<th>Nombre</th>
+				<th>Edad</th>
+			
+			</tr>
+			<tr th:each="usuario : ${usuarios}">
+				<td th:text="${usuario.id}"></td>
+				<td th:text="${usuario.nombre}"></td>
+				<td th:text="${usuario.edad}"></td>
+			</tr>
+		</table>
+		</p>
+		<a href="javascript:history.go(-1)">Volver</a>
+</body>
+</html>
