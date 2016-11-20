@@ -29,6 +29,16 @@ En todos los proyectos se realizan los mismos tres escenarios:
 
 En los distintos proyectos se muestra como configurar librerías javascript y/o templates thymeleaf, así como el lugar donde poner todos los recursos estáticos para que estén accesibles.
 
+> En todos los proyectos se puede usar la consola de la base de datos accediendo a:
+> 
+>           http://localhost:8080/h2-console
+> 
+>   Usuario: sa y Password: vacío
+
+> Los proyectos también están preparados para poder usar __LiveReload__ si se tiene instalado en el navegador.
+> 
+
+
 
 
 
