@@ -16,23 +16,23 @@
 		vm.guardarUsuario = guardarUsuario;
 
 		function getUsuario(){
-			$http.get('usuario').success(function(data){
+			$http.get('http://localhost:8080/usuario').success(function(data){
 			 
 			 vm.usuario_recuperado = data;
 			});
 		}
 
 		function getAll(){
-			$http.get('usuarios').success(function(data){
+			$http.get('http://localhost:8080/usuarios').success(function(data){
 			 
 			 vm.usuarios = data;
 			});
 		}
 		function guardarUsuario() {
-			$http.post('usuario',vm.usuario_guardado)
+			$http.post('http://localhost:8080/usuario',vm.usuario_guardado)
 			   .then(function success(response){
 						vm.mensaje = "Usuario creado correctamente";
-						
+
 			       },
 			   	   function error(response){
 			   	   	console.log(response.data.message);
