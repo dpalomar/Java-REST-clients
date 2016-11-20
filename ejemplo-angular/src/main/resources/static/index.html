@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="demoApp" ng-controller="UsuariosController as vm">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+</head>
+<body>
+
+	<h2>Ejemplo con un usuario:</h2>
+	<button id="btn-single" ng-click="vm.getUsuario()">Click para conocer al usuario</button>
+	<pre>La petición se hará a http://localhost:8080/usuario/</pre>
+	<p id="elusuario">El usuario es: {{ vm.usuario_recuperado.nombre }}</p>
+	<p id="elusuarioDocument">El documento es: {{ vm.usuario_recuperado | json}} </p>
+
+	<h2>Ejemplo con un listado de usuarios</h2>
+	<pre>La petición se realizará a http://localhost:8080/usuarios</pre>
+	<button id="btn-list" ng-click="vm.getAll()">Click obtener a todos los usuarios</button>
+
+	<table id="tbl-usuarios">
+		<tr>
+			<th>ID</th>
+			<th>Nombre</th>
+			<th>Edad</th>
+		</tr>
+		<tr ng-repeat="usuario in vm.usuarios ">
+
+
+			<td>{{ usuario.id }} </td>
+			<td>{{ usuario.nombre }}  </td>
+	
+			<td>{{ usuario.edad }} </td>
+
+			
+		</tr>
+	</table>
+
+	<h2>Insertar por post un nuevo usuario</h2>
+	<form id="my-form" ng-submit="vm.guardarUsuario()">
+		<input type="text" name="nombre" placeholder="Nombre" ng-model="vm.usuario_guardado.nombre"> 
+		<input type="number" name="edad" placeholder="Edad" ng-model="vm.usuario_guardado.edad"> 
+			<input type="submit">
+	</form>
+	<span id="mensaje">{{ vm.mensaje }}</span>
+	<script	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+	<script	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/usuariosCtrl.js"></script>
+
+</body>
+</html>
