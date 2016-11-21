@@ -38,6 +38,8 @@ En los distintos proyectos se muestra como configurar librerías javascript y/o 
 > Los proyectos también están preparados para poder usar __LiveReload__ si se tiene instalado en el navegador.
 > 
 
+Se ha habilitado **Cross-origin** para permitir el acceso desde otros dominios, (útil para desarrollo de microservicios)
+Más info en: [https://spring.io/blog/2015/06/08/cors-support-in-spring-framework]()
 
 
 
